@@ -1,1 +1,69 @@
-*,*::after,*::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{font-family:Arial, Verdana, sans-serif}.container .block{min-height:200px;min-width:200px;max-width:300px;color:white;padding:0.5em;background-color:#333;border:0.1em solid #DDD}.container .block h2{margin:0;font-weight:normal}.container .block.small{min-height:auto;min-width:auto;width:100px;height:100px}.container .bg-blue{background-color:blue}.container .bg-green{background-color:green}.container .bg-purple{background-color:purple}
+*,*::after,*::before{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+
+body{
+    font-family:Arial, Verdana, sans-serif
+}
+
+.block{
+    /* this is the basis of the boxes, change here affect them all */
+    min-height:200px;
+    min-width:200px;
+    max-width:300px;
+    color:white;
+    padding:0.5em;
+    background-color:#333;
+    border:0.1em solid #DDD
+}
+
+.block h2{
+    /* affects the h2 titles of all boxes */
+    margin:0;
+    font-weight:normal
+}
+
+.b-1{
+    /* box #1 */
+    position:absolute;
+    left: 0;
+    top: 100px;
+    z-index: -1;
+}
+
+.b-2{
+    /* box #2 */
+    background-color:blue;
+    position: absolute;
+    left: 25px;
+    top: 200px;
+}
+
+.b-3{
+    /* box #3 */
+    background-color:green;
+    position: relative;
+    min-height:auto;
+    min-width:auto;
+    width:100px;
+    height:100px;
+    right: -90px;
+    bottom: -62px;
+}
+
+.b-4{
+    /* box #4 */
+    background-color:purple;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 25vw;
+    height: 25vh;
+    max-width: 1000rem;
+    max-height: 1000rem;
+    min-width: 0;
+    min-height: 0;
+    z-index: -2;
+}
